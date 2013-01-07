@@ -39,7 +39,7 @@ Batch = Striuct.define do
   def setup
   end
   
-  # @return [String] path
+  # @param [String] path
   # @return [String] local_path
   def download(path)
     local_path = File.basename path
@@ -67,8 +67,5 @@ attrs = {address: '192.168.1.1', loginname: 'tester', password: 'test_password'}
 
 ExampleBatch.run attrs do
   archive_path = archive
-  puts '----'
-  p archive_path
-  puts '----'
   download archive_path
 end
