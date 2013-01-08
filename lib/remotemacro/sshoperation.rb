@@ -13,15 +13,17 @@ module RemoteMacro
   #         sh.excute! 'cd /tmp'
   #         sh.excute './batch.sh' do |_, output|
   #           unless output.chomp == 'Completed!'
-  #             raise Error, "/tmp/batch.sh finished, but unexpected behavior\n#{output}"
+  #             raise Error, "/tmp/batch.sh\n#{output}"
   #           end
   #         end
   #         sh.excute! 'exit'
   #       end
   #     end
   #   end
-  #
-  #   DailyOperation.run do
+  # 
+  #   attrs = {address: '192.168.1.1', loginname: 'tester', password: 'test_password'}
+  # 
+  #   DailyOperation.run attrs do
   #     excute_batch!
   #     download! '/tmp/batch.log'
   #   end
