@@ -1,4 +1,4 @@
-# Copyight (c) 2012 Kenichi Kamiya
+# Copyight (c) 2013 Kenichi Kamiya
 
 require 'striuct'
 require 'net/ssh'
