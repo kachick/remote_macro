@@ -6,6 +6,8 @@ require 'net/ssh/shell'
 
 module RemoteMacro
 
+  # @abstract
+  # @return [Class] A subclass of Striuct
   # @example
   #   class DailyOperation < RemoteMacro::SSHOperation
   #     def excute_batch!
